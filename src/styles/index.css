@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#222222] text-[#E5E5E5] font-sans overflow-x-hidden;
+  }
+}
+
+@layer components {
+  .text-outline {
+    -webkit-text-stroke: 1px #E5E5E5;
+    color: transparent;
+  }
+}
