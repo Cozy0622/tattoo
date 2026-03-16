@@ -37,7 +37,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative h-screen w-full bg-black flex overflow-hidden">
+    <section ref={containerRef} className="relative h-screen w-full bg-black flex overflow-x-hidden">
       {/* 4 Split Panels with High Quality Backgrounds */}
       {panelImages.map((img, i) => (
         <div
