@@ -4,13 +4,35 @@
 
 @layer base {
   body {
-    @apply bg-[#222222] text-[#E5E5E5] font-sans;
+    @apply antialiased bg-[#0D0D12] text-[#FAF8F5] overflow-x-hidden cursor-crosshair;
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* 強制移除所有文字陰影與廉價發光效果 */
+  * {
+    text-shadow: none !important;
+    box-shadow: none !important;
+    -webkit-font-smoothing: antialiased;
   }
 }
 
-@layer components {
-  .text-outline {
-    -webkit-text-stroke: 1px #E5E5E5;
-    color: transparent;
+@layer utilities {
+  .font-heading { font-family: 'Inter', sans-serif; }
+  .font-dramatic { font-family: 'Playfair Display', serif; }
+  .font-mono { font-family: 'JetBrains Mono', monospace; }
+
+  .ease-expo {
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
   }
+}
+
+/* 捲軸美化：黑曜石風格 */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #0D0D12;
+}
+::-webkit-scrollbar-thumb {
+  background: #C9A84C;
 }

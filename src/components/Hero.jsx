@@ -6,10 +6,10 @@ const Hero = () => {
   const panelsRef = useRef([]);
 
   const panelImages = [
-    'https://images.unsplash.com/photo-1598449334855-0112764548fc?q=80&w=2070&auto=format&fit=crop', // Ink
-    'https://images.unsplash.com/photo-1590246814883-578561dbdab1?q=80&w=1974&auto=format&fit=crop', // Japanese art
-    'https://images.unsplash.com/photo-1620912189865-1e8a33da4c5e?q=80&w=2072&auto=format&fit=crop', // Traditional
-    'https://images.unsplash.com/photo-1550684848-86a5d8727436?q=80&w=2070&auto=format&fit=crop', // Texture
+    './images/S__176177157_0.jpg',
+    './images/S__176177158_0.jpg',
+    './images/S__176177159_0.jpg',
+    './images/S__176177160_0.jpg',
   ];
 
   useEffect(() => {
