@@ -96,14 +96,16 @@ const Gallery = ({ images }) => {
         
         <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
           {images.map((src, i) => (
-            <div key={i} className="break-inside-avoid relative group overflow-hidden bg-[#15151A] rounded-sm transition-all duration-700">
+            <div key={i} className="break-inside-avoid relative group overflow-hidden bg-[#15151A] rounded-sm transition-all duration-700 min-h-[300px]">
               <img 
                 src={getAssetPath(src)} 
                 alt={`作品典藏 ${i}`}
                 loading="lazy"
-                className="w-full h-auto object-cover grayscale-[0.3] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000 ease-out"
+                decoding="async"
+                className="w-full h-auto object-cover grayscale-[0.3] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000 ease-out will-change-transform opacity-0 animate-reveal"
+                onLoad={(e) => e.target.classList.remove('opacity-0')}
               />
-              <div className="absolute inset-0 bg-[#0D0D12]/10 group-hover:bg-transparent transition-colors duration-700"></div>
+              <div className="absolute inset-0 bg-[#0D0D12]/10 group-hover:bg-transparent transition-colors duration-700 pointer-events-none"></div>
             </div>
           ))}
         </div>
